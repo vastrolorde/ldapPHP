@@ -12,9 +12,9 @@ In model or controller
 
 
 if ($this->ldap->validar($usuario,$password) != 'ERROR'):
-/* here code to validation ok (ex: session sets... ) */
+/*here code to validation ok (ex: session sets... )*/
 else:
-/* here error  (ex: redirect login form) */
+/*here error  (ex: redirect login form)*/
 endif;
 
 
