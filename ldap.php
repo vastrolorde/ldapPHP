@@ -15,7 +15,7 @@ class Ldap {
 		$dominio = '<myDOMAIN>';
 		$servidor = '<LDAP_SERVER>';
 		$ldaprdn =  $dominio . "\\" . $usuario;
-		$ldappass = $password;
+		$ldappass = utf8_decode($password); //issue with passwords with "ñ"
 		$ldapconn = ldap_connect($servidor) 
 		    or die("Could not connect to LDAP server."); /* Connect or die this is the question!! */
 		if ($ldapconn)  {
